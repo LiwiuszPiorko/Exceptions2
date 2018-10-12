@@ -1,0 +1,2 @@
+Mleko, Mleczarnia, 3,00.
+Chleb, Piekarnia, 2,50.
