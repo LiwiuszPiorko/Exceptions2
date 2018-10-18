@@ -16,7 +16,7 @@ public class Files {
                 for (int i = 0; i < products1.length; i++) {
                     products1[i] = fileScan.next();
                 }
-                System.out.print(Arrays.toString(products1));
+                    System.out.print(Arrays.toString(products1).replace("[","").replace("]","").replace(".","\n"));
             }
         } catch (FileNotFoundException e) {
             System.err.println("Plik nie istnieje");
