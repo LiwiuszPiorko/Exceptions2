@@ -1,11 +1,12 @@
+import java.util.Objects;
+
 public class Products {
     private String name;
     private String manufacturer;
     private double price;
 
-    public Products(){}
 
-   public Products(String name, String manufacturer, double price) {
+    public Products(String name, String manufacturer, double price) {
         this.name = name;
         this.manufacturer = manufacturer;
         this.price = price;
@@ -36,6 +37,21 @@ public class Products {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Products products = (Products) o;
+        return Double.compare(products.price, price) == 0 &&
+                Objects.equals(name, products.name) &&
+                Objects.equals(manufacturer, products.manufacturer);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, manufacturer, price);
+    }
+
+    @Override
     public String toString() {
         return "Products{" +
                 "name='" + name + '\'' +
@@ -43,14 +59,21 @@ public class Products {
                 ", price=" + price +
                 '}';
     }
-
-
-    //  public double returnSum(double price){
-    //    return;
-
-
-    //}
-   // public void showMostExpensive(){
-
+    double returnSum (double price1, double price2){
+        double sum=price1+price2;
+        return sum;
     }
-//}
+    double isBigger(double price1,double price2){
+
+        int compare = Double.compare(price1, price2);
+
+        if(compare > 0) {
+            return price1;
+        } else{
+            return price2;
+
+        }
+    }
+}
+
+
