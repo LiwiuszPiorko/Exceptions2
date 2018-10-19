@@ -1,2 +1,3 @@
 Mleko, Mleczarnia, 3,00.
-Chleb, Piekarnia, 2,50.
+Chleb, Piekarnia, 5,50.
+Piwo, Browar, 4,00.

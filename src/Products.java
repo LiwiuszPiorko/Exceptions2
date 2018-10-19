@@ -59,21 +59,7 @@ public class Products {
                 ", price=" + price +
                 '}';
     }
-    double returnSum (double price1, double price2){
-        double sum=price1+price2;
-        return sum;
-    }
-    double isBigger(double price1,double price2){
-
-        int compare = Double.compare(price1, price2);
-
-        if(compare > 0) {
-            return price1;
-        } else{
-            return price2;
-
-        }
-    }
 }
+
 
 
